@@ -11,7 +11,9 @@
 <ul>
     {% for item in item_list %}
     <li>
+        <a href="{% url 'myapp:detail_view' item.id %}">
         {{item.item_name}}-->{{item.desc}}-->{{item.price}}
+        </a>
     </li>
     {% endfor %}
 </ul>
