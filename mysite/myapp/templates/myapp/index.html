@@ -1,0 +1,17 @@
+<!--{% for item in item_list %}-->
+<!--<br>-->
+<!--Item Name :: {{item.item_name}}-->
+<!--<br>-->
+<!--Item Desc :: {{item.desc}}-->
+<!--<br>-->
+<!--Item Price ::{{item.price}}-->
+<!--<br>-->
+<!--{% endfor %}-->
+
+<ul>
+    {% for item in item_list %}
+    <li>
+        {{item.item_name}}-->{{item.desc}}-->{{item.price}}
+    </li>
+    {% endfor %}
+</ul>

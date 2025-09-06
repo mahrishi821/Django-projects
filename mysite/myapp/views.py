@@ -6,7 +6,11 @@ from .models import Item
 
 def index(request):
     items=Item.objects.all()
-    return HttpResponse(items)
+    context={
+        "item_list":items
+    }
+    # return HttpResponse(request,"myapp/index.html")
+    return render(request,"myapp/index.html",context)
 
 def ReviewAPI(request):
     return HttpResponse("Review Called")
