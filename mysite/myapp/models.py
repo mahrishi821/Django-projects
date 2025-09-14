@@ -6,7 +6,7 @@ class Item(models.Model):
     item_name=models.CharField(max_length=200)
     desc=models.CharField(max_length=633)
     price=models.IntegerField()
-    item_image=models.CharField(max_length=500,default="https://theme-assets.getbento.com/sensei/e68cf53.sensei/assets/images/catering-item-placeholder-704x520.png")
+    item_image=models.CharField(max_length=900000,default="https://theme-assets.getbento.com/sensei/e68cf53.sensei/assets/images/catering-item-placeholder-704x520.png")
 
     def __str__(self):
         return self.item_name

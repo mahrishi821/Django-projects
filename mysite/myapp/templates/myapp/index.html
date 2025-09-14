@@ -1,10 +1,10 @@
 {% extends 'myapp/base.html' %}
 {% block body %}
-<div >
+<div>
     {% for item in item_list %}
     <div class="m-10 flex  w-1/2 mx-auto">
         <div>
-        <img class="w-64 rounded-lg" src="{{item.item_image}}" alt="">
+        <img class="w-64 rounded-lg" src="{{item.item_image}}" alt=""/>
         </div>
 
         <div class="mx-16">
@@ -12,9 +12,8 @@
             <div>{{item.desc}}</div>
             <div class="text-green-900 font-bold">${{item.price}}</div>
         </div>
-
          <div>
-             <a class="bg-white-500 text-white-500 font-bold" href="{% url 'myapp:detail_view' item.id %}"/> view Details
+             <a class="bg-red-500 text-white-500 font-bold px-4 py-2 rounded-md" href="{% url 'myapp:detail_view' item.id %}"> view Details </a>
          </div>
     </div>
      {% endfor %}
