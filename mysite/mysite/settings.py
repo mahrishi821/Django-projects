@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'food.apps.FoodConfig',
     'myapp',
+    'users',
     'rest_framework',
 ]
 
