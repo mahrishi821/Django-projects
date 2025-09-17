@@ -3,8 +3,10 @@ from django.http import HttpResponse
 from rest_framework.views import APIView
 from .models import Item
 from .forms import  ItemForm
-# Create your views here.
+from django.contrib.auth.decorators import login_required
 
+# Create your views here.
+@login_required()
 def index(request):
     items=Item.objects.all() # for queryset
     context={
