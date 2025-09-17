@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .forms import RegisterForms
+from django.contrib.auth import logout
 # Create your views here.
 
 def register(request):
@@ -19,3 +20,7 @@ def register(request):
 
 
     return render(request,'users/register.html',{"form":form})
+
+def logout_view(request):
+    logout(request)
+    return render(request,'users/logout.html')
