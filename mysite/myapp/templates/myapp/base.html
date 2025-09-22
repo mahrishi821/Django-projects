@@ -1,35 +1,35 @@
-<!--{% load static %}-->
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<!--&lt;!&ndash;    <link rel="stylesheet" href="{% static 'myapp/style.css'%}">&ndash;&gt;-->
-<!--    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>   &lt;!&ndash;for development only for production install the tailwind css inside the project&ndash;&gt;-->
-<!--    <title>Page Title</title>-->
-<!--</head>-->
-<!--<body>-->
-<!--<nav class="bg-blue-400 text-white">           &lt;!&ndash;# nav here navigation bar&ndash;&gt;-->
-<!--    <div class="flex justify-between px-2 py-4">-->
-<!--        <a herf="" class=" font-bold"> Food APP</a>-->
-<!--        <div class="space-x-6">-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <link rel="stylesheet" href="{% static 'myapp/style.css'%}">-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>   <!--for development only for production install the tailwind css inside the project-->
+    <title>Page Title</title>
+</head>
+<body>
+<nav class="bg-blue-400 text-white">           <!--# nav here navigation bar-->
+    <div class="flex justify-between px-2 py-4">
+        <a herf="" class=" font-bold"> Food APP</a>
+        <div class="space-x-6">
 
-<!--            <a herf="">Welcome {{user.username}} !</a>-->
-<!--            {% if user.is_authenticated %}-->
-<!--             <a href="{% url 'logout' %}">Logout</a>-->
-<!--            {% else %}-->
-<!--            <a href="{% url 'login' %}"> Login </a>-->
-<!--            {% endif %}-->
+            <a herf="">Welcome {{user.username}} !</a>
+            {% if user.is_authenticated %}
+             <a href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <a href="{% url 'login' %}"> Login </a>
+            {% endif %}
 
-<!--        </div>-->
-<!--    </div>-->
-<!--</nav>-->
-<!--{% if messages %}-->
-<!-- {% for message in messages %}-->
-<!--    <div class="bg-green-500 text-white-700">{{message}}</div>-->
-<!-- {% endfor %}-->
-<!--{% endif %}-->
-<!--  {% block body%}-->
-<!--  {% endblock %}-->
-<!--</body>-->
-<!--</html>-->
+        </div>
+    </div>
+</nav>
+{% if messages %}
+ {% for message in messages %}
+    <div class="bg-green-500 text-white-700">{{message}}</div>
+ {% endfor %}
+{% endif %}
+  {% block body%}
+  {% endblock %}
+</body>
+</html>
